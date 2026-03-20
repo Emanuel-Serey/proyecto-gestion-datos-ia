@@ -1,4 +1,4 @@
-# 🚀 Proyecto Gestión de Datos IA
+# Proyecto Gestión de Datos IA
 
 Aplicación web básica desarrollada con **Flask**, contenerizada con **Docker** y desplegada siguiendo buenas prácticas de desarrollo moderno (Git, CI/CD y cloud).
 
@@ -32,6 +32,12 @@ Actividad 1.2/
 │
 ├── app/
 │   └── main.py
+│
+├── img/
+│   ├── vscode.png
+│   ├── localhost.png
+│   ├── githubactions.png
+│   └── render.png
 │
 ├── requirements.txt
 ├── Dockerfile
@@ -94,40 +100,50 @@ Se incluye un archivo `.env.example` como referencia para futuras configuracione
 
 ## CI/CD (GitHub Actions)
 
-Se implementará un pipeline básico para automatizar procesos como:
+Se implementó un pipeline básico utilizando GitHub Actions para:
 
-* Build del proyecto
+* Build automático del proyecto
 * Validación de dependencias
-* Ejecución de contenedores
+* Integración continua en cada push al repositorio
 
 ---
 
 ## Despliegue en la nube
 
-La aplicación será desplegada en una plataforma cloud (por ejemplo: Render).
+La aplicación fue desplegada utilizando **Render**, mediante un contenedor Docker.
 
-URL: *(pendiente)*
+Se utilizó **Gunicorn** como servidor WSGI para producción, permitiendo manejar múltiples solicitudes de manera eficiente.
+
+URL de la aplicación:
+https://proyecto-gestion-datos-ia.onrender.com
 
 ---
 
 ## Evidencia
 
-Se incluirán capturas de:
+Se incluyen capturas de:
 
-* Entorno de desarrollo
-* Ejecución local
-* Docker funcionando
-* Pipeline CI/CD
-* Despliegue en la nube
+### Entorno de desarrollo
+![VSCode](img/vscode.png)
+
+### Ejecución local
+![Localhost](img/localhost.png)
+
+### CI/CD (GitHub Actions)
+![GitHub Actions](img/githubactions.png)
+
+### Despliegue en la nube (Render)
+![Render](img/render.png)
 
 ---
 
 ## Decisiones técnicas
 
-* Se utiliza **Flask** por su simplicidad para prototipos rápidos
-* **Gunicorn** como servidor de producción
-* **Docker** para asegurar portabilidad entre entornos
-* **GitHub** como plataforma de control de versiones
+* Se utiliza **Flask** por su simplicidad y rapidez para desarrollar APIs y prototipos.
+* **Gunicorn** fue elegido como servidor de producción en lugar del servidor de desarrollo de Flask.
+* Se utilizó **Docker** para asegurar portabilidad y consistencia del entorno.
+* Se implementó **CI/CD con GitHub Actions** para automatizar el proceso de integración.
+* Se configuró correctamente el puerto requerido por Render para el despliegue en la nube.
 
 ---
 
